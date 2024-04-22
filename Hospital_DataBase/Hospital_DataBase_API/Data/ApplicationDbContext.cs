@@ -9,6 +9,9 @@ namespace Hospital_DataBase_API.Data
         { 
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Section> Sections { get; set; }
+        public DbSet<Procedure> Procedures { get; set; }
        
     }
 }

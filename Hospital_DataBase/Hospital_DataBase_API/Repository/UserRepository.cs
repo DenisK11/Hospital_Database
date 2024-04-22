@@ -22,9 +22,9 @@ namespace Hospital_DataBase_API.Repository
             secretKey = configuration.GetValue<string>("ApiSettings:Secret");
         }
 
-        public bool IsUniqueUser(string cnp)
+        public bool IsUniqueUser(string username, string cnp)
         {
-            var user =_db.Users.FirstOrDefault(x=>x.CNP == cnp);
+            var user =_db.Users.FirstOrDefault(x=>x.UserName == username || x.CNP == cnp);
             if (user == null)
             {
                 return true;
@@ -68,15 +68,16 @@ namespace Hospital_DataBase_API.Repository
         {
             User user = new()
             {
-               UserName = registrationRequestDTO.UserName,
-               Password = registrationRequestDTO.Password,
-               Email = registrationRequestDTO.Email,
-               FullName = registrationRequestDTO.FullName,
-               PhoneNumber = registrationRequestDTO.PhoneNumber,
-               CNP = registrationRequestDTO.CNP,
-               Role = registrationRequestDTO.Role
-
-            };
+                UserName = registrationRequestDTO.UserName,
+                Password = registrationRequestDTO.Password,
+                FullName = registrationRequestDTO.FullName,
+                PhoneNumber = registrationRequestDTO.PhoneNumber,
+                CNP = registrationRequestDTO.CNP,
+                Role = registrationRequestDTO.Role,
+                RegisterDate = DateTime.UtcNow,
+                Years = registrationRequestDTO.Years,
+                Section = registrationRequestDTO.Section
+    };
             _db.Users.Add(user);
             await _db.SaveChangesAsync();
             user.Password = "";

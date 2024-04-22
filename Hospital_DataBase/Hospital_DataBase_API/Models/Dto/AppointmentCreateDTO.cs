@@ -2,10 +2,8 @@
 
 namespace Hospital_DataBase_API.Models.Dto
 {
-    public class AppointmentDTO
+    public class AppointmentCreateDTO
     {
-        [Required]
-        public int Id { get; set; }
         [Required]
         public string ProcedureName { get; set; }
         [Required]

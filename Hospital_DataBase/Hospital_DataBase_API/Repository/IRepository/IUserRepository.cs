@@ -5,7 +5,7 @@ namespace Hospital_DataBase_API.Repository.IRepository
 {
     public interface IUserRepository
     {
-        bool IsUniqueUser(string username);
+        bool IsUniqueUser(string username, string cnp);
         Task<LoginResponseDTO> Login(LoginRequestDTO loginRequestDTO);
         Task<User> Register(RegistrationRequestDTO registrationRequestDTO);
     }

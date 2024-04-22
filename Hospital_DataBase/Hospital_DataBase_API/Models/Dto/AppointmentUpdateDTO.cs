@@ -2,7 +2,7 @@
 
 namespace Hospital_DataBase_API.Models.Dto
 {
-    public class AppointmentDTO
+    public class AppointmentUpdateDTO
     {
         [Required]
         public int Id { get; set; }
