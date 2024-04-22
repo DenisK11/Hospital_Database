@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_Database_API\\Hospital_DataBase_API.csproj": {}
+    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {}
   },
   "projects": {
-    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_Database_API\\Hospital_DataBase_API.csproj": {
+    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_Database_API\\Hospital_DataBase_API.csproj",
+        "projectUniqueName": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
         "projectName": "Hospital_DataBase_API",
-        "projectPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_Database_API\\Hospital_DataBase_API.csproj",
+        "projectPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
         "packagesPath": "C:\\Users\\horea\\.nuget\\packages\\",
-        "outputPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_Database_API\\obj\\",
+        "outputPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"

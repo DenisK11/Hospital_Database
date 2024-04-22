@@ -1,11 +1,12 @@
-﻿namespace Hospital_DataBase_API.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Hospital_DataBase_API.Models
 {
     public class Section
     {
-        public int Id { get; set; }
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string Name { get; set; }
-        public ICollection<Doctor> Doctors { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
 
     }
 }

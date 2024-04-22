@@ -7,23 +7,18 @@ namespace Hospital_DataBase_API.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        [MaxLength(100)]
         public string UserName { get; set; }
-        [Required]
-        [MaxLength(100)]
         public string Password { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-        public DateOnly RegisterDate { get; set; }
-        [Required]
+        public DateTime RegisterDate { get; set; }
         public string FullName { get; set; }
-        [Required]
         public string PhoneNumber { get; set; }
         public string CNP { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
         public string Role { get; set; }
+
+        [ForeignKey("Section")]
+        public string? SectionName { get; set; }
+        public Section? Section { get; set; }
+        public int? Years { get; set; }
 
     }
 }
