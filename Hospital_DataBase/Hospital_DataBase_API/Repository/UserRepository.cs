@@ -76,7 +76,7 @@ namespace Hospital_DataBase_API.Repository
                 Role = registrationRequestDTO.Role,
                 RegisterDate = DateTime.UtcNow,
                 Years = registrationRequestDTO.Years,
-                Section = registrationRequestDTO.Section
+                SectionName = registrationRequestDTO.SectionName
     };
             _db.Users.Add(user);
             await _db.SaveChangesAsync();

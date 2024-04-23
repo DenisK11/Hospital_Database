@@ -2,6 +2,7 @@
 using Hospital_DataBase_API.Models.Dto;
 using Hospital_DataBase_API.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -13,13 +14,15 @@ namespace Hospital_DataBase_API.Controllers
     [ApiController]
     public class UsersController : Controller
     {
+        private readonly ISectionRepository _dbSection;
         private readonly IUserRepository _userRepo;
         protected APIResponse _response;
 
-        public UsersController(IUserRepository userRepo) 
+        public UsersController(IUserRepository userRepo, ISectionRepository dbSection)
         {
             _userRepo = userRepo;
             _response = new();
+            _dbSection = dbSection;
         }
 
         [HttpPost("login")]
@@ -42,8 +45,15 @@ namespace Hospital_DataBase_API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegistrationRequestDTO model)
         {
+           
+            if (await _dbSection.GetAsync(u => u.Name.ToLower() == model.SectionName.ToLower()) == null)
+            {
+                ModelState.AddModelError("CustomError", "Section Name is Invalid!");
+                return BadRequest(ModelState);
+            }
+
             bool ifUserNameUnique = _userRepo.IsUniqueUser(model.UserName, model.CNP);
-            if(!ifUserNameUnique)
+            if (!ifUserNameUnique)
             {
                 _response.StatusCode = HttpStatusCode.BadRequest; 
                 _response.IsSuccess = false;

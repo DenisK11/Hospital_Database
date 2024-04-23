@@ -15,7 +15,7 @@ namespace Hospital_DataBase_API.Models.Dto
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
         public string CNP { get; set; }
-        public Section? Section  { get; set; }
+        public string SectionName { get; set; }
         public int? Years { get; set; }
     }
 }
