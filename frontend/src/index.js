@@ -1,17 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { RouterProvider } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import PatientLogin from "./pages/PatientLogin";
+import { createBrowserRouter } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+import Root from "./Root";
+import { action as signupAction } from "./components/SignUpForm";
+import { action as loginAction } from "./components/LoginForm";
+import PatientAccount from "./pages/PatientAccount";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Root />,
+      },
+      {
+        path: "patient-login",
+        children: [
+          {
+            index: true,
+            element: <PatientLogin />,
+          },
+          {
+            path: "signup",
+            element: <SignUpPage />,
+            action: signupAction,
+          },
+          {
+            path: "login",
+            element: <LoginPage />,
+            // errorElement: <LoginPage />,
+            action: loginAction,
+          },
+        ],
+      },
+      {
+        path: "patient-account",
+        children: [
+          {
+            index: true,
+            element: <PatientAccount />,
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

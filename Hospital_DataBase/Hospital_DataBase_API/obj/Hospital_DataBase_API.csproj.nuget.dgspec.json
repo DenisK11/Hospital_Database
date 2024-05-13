@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {}
+    "C:\\Users\\tonir\\Desktop\\HospitalDataBase\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {}
   },
   "projects": {
-    "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {
+    "C:\\Users\\tonir\\Desktop\\HospitalDataBase\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
+        "projectUniqueName": "C:\\Users\\tonir\\Desktop\\HospitalDataBase\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
         "projectName": "Hospital_DataBase_API",
-        "projectPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
-        "packagesPath": "C:\\Users\\horea\\.nuget\\packages\\",
-        "outputPath": "D:\\faculta\\Proiect Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\obj\\",
+        "projectPath": "C:\\Users\\tonir\\Desktop\\HospitalDataBase\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
+        "packagesPath": "C:\\Users\\tonir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tonir\\Desktop\\HospitalDataBase\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\horea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tonir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -99,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
