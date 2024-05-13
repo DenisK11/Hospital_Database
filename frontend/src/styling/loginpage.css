@@ -1,0 +1,102 @@
+.login-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  background-image: url("../background_home_page.jpg");
+}
+
+.purple-overlay {
+  padding: 20px;
+  border-radius: 10px;
+  height: 80%;
+  width: 23%;
+  position: relative;
+  left: 9%;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  margin-right: 20px; /* Add margin between image and form */
+}
+
+.form-container {
+  flex: 1; /* Take remaining space */
+}
+
+/* Example CSS for styling the login form */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+/* Example CSS for styling the image */
+img {
+  width: 16%;
+  height: auto;
+  position: relative;
+  left: -13%;
+}
+
+/* buttons style*/
+.buttonLog {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer; /* Changed from 'y' to 'pointer' */
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(152, 36, 219, 0.637);
+  color: #fff;
+  display: block; /* Ensure button takes full width */
+  margin: 0 auto; /* Center horizontally */
+  width: 80%; /* Make button width fit its content */
+  margin-top: 90%;
+}
+.buttonSign {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer; /* Changed from 'y' to 'pointer' */
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(152, 36, 219, 0.637);
+  color: #fff;
+  display: block; /* Ensure button takes full width */
+  margin: 0 auto; /* Center horizontally */
+  width: 80%; /* Make button width fit its content */
+  margin-top: -50%;
+}
+
+.button:hover {
+  background-color: rgb(122, 48, 48);
+}
+
+.button:active {
+  background-color: rgb(122, 48, 48);
+}
