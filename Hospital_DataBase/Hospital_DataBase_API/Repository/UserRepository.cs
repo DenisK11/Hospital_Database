@@ -22,9 +22,9 @@ namespace Hospital_DataBase_API.Repository
             secretKey = configuration.GetValue<string>("ApiSettings:Secret");
         }
 
-        public bool IsUniqueUser(string username, string cnp)
+        public bool IsUniqueUser(string username, string cnp, string phonenumber)
         {
-            var user =_db.Users.FirstOrDefault(x=>x.UserName == username || x.CNP == cnp);
+            var user = _db.Users.FirstOrDefault(x=>x.UserName == username || x.CNP == cnp || x.PhoneNumber == phonenumber);
             if (user == null)
             {
                 return true;
@@ -77,7 +77,7 @@ namespace Hospital_DataBase_API.Repository
                 RegisterDate = DateTime.UtcNow,
                 Years = registrationRequestDTO.Years,
                 SectionName = registrationRequestDTO.SectionName
-    };
+            };
             _db.Users.Add(user);
             await _db.SaveChangesAsync();
             user.Password = "";
