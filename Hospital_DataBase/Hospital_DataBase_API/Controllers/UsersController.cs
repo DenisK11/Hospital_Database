@@ -63,7 +63,7 @@ namespace Hospital_DataBase_API.Controllers
                 return BadRequest(ModelState);
             }
 
-            bool ifUserNameUnique = _userRepo.IsUniqueUser(model.UserName, model.CNP);
+            bool ifUserNameUnique = _userRepo.IsUniqueUser(model.UserName, model.CNP, model.PhoneNumber);
             if (!ifUserNameUnique)
             {
                 _response.StatusCode = HttpStatusCode.BadRequest; 
