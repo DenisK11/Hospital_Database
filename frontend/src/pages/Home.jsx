@@ -9,31 +9,24 @@ function Home() {
         <div className="background-container">
             <InteractiveImage
                 imageName='anca' 
-                imagePosition={{ left: '400px', top: '300px' }} 
-                textPosition={{ left: '580px', top: '-300px' }}
+                imagePosition={{ left: '550px', top: '300px' }} 
+                textPosition={{ left: '480px', top: '-300px' }}
                 overlayText="Patient" 
                 link='patient-login'
             />
             <InteractiveImage
                 imageName='anca' 
-                imagePosition={{ left: '500px', top: '300px' }} 
-                textPosition={{ left: '280px', top: '-300px' }}
+                imagePosition={{ left: '650px', top: '300px' }} 
+                textPosition={{ left: '180px', top: '-300px' }}
                 overlayText="Doctor" 
-                link='/patient-login'
+                link='/doctor-login'
             />
             <InteractiveImage
                 imageName='anca' 
-                imagePosition={{ left: '600px', top: '300px' }} 
-                textPosition={{ left: '60', top: '-300px' }}
+                imagePosition={{ left: '750px', top: '300px' }} 
+                textPosition={{ left: '-100px', top: '-300px' }}
                 overlayText="Admin" 
-                link='/patient-login'
-            />
-            <InteractiveImage
-                imageName='anca' 
-                imagePosition={{ left: '700px', top: '300px' }} 
-                textPosition={{ left: '-310px', top: '-300px' }}
-                overlayText="Shop" // Specify the text to display on hover
-                link='/patient-login'
+                link='/admin-login'
             />
             
         </div>
