@@ -73,6 +73,5 @@ namespace Hospital_DataBase_API.Controllers
             _response.IsSuccess = true;
             return Ok(_response);
         }
-
     }
 }

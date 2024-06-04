@@ -3,7 +3,7 @@ import "../styling/loginpage.css";
 import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
-function PatientAccount() {
+function DoctorAccountPage() {
   const navigate = useNavigate();
 
   const toggleLoadPage = (page) => {
@@ -18,27 +18,15 @@ function PatientAccount() {
           <>
             <button
               className="buttonLog"
-              onClick={() => toggleLoadPage("make-appointment")}
+              onClick={() => toggleLoadPage("see-my-patients")}
             >
-              Make Appointment
+              See My Patients
             </button>
             <button
               className="buttonSign"
-              onClick={() => toggleLoadPage("see-appointment")}
+              onClick={() => toggleLoadPage("see-appointments")}
             >
-              See Appointment
-            </button>
-            <button
-              className="buttonSign"
-              onClick={() => toggleLoadPage("see-doctors")}
-            >
-              See Doctors
-            </button>
-            <button
-              className="buttonSign"
-              onClick={() => toggleLoadPage("see-sections")}
-            >
-              See Sections
+              See My Appointments
             </button>
           </>
         </div>
@@ -48,4 +36,4 @@ function PatientAccount() {
   );
 }
 
-export default PatientAccount;
+export default DoctorAccountPage;
