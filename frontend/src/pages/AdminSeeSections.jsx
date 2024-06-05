@@ -3,7 +3,7 @@ import "../styling/loginpage.css";
 import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
-function PatientAccount() {
+function AdminSeeSections() {
   const navigate = useNavigate();
 
   const toggleLoadPage = (page) => {
@@ -13,32 +13,25 @@ function PatientAccount() {
   return (
     <>
       <div className="login-container">
-        <img src="../assets/anca.png" alt="Login Image" />
         <div className="purple-overlay">
           <>
             <button
               className="buttonLog"
-              onClick={() => toggleLoadPage("make-appointment")}
+              onClick={() => toggleLoadPage("get-all-sections")}
             >
-              Make Appointment
+              Get All Sections
             </button>
             <button
               className="buttonSign"
-              onClick={() => toggleLoadPage("see-appointment")}
+              onClick={() => toggleLoadPage("delete-section")}
             >
-              See Appointment
+               Delete Section
             </button>
             <button
               className="buttonSign"
-              onClick={() => toggleLoadPage("see-doctors")}
+              onClick={() => toggleLoadPage("post-section")}
             >
-              See Doctors
-            </button>
-            <button
-              className="buttonSign"
-              onClick={() => toggleLoadPage("see-sections")}
-            >
-              See Sections
+              Post Section
             </button>
           </>
         </div>
@@ -48,4 +41,4 @@ function PatientAccount() {
   );
 }
 
-export default PatientAccount;
+export default AdminSeeSections;

@@ -3,8 +3,10 @@ using Hospital_DataBase_API.Models;
 using Hospital_DataBase_API.Models.Dto;
 using Hospital_DataBase_API.Repository.IRepository;
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
@@ -84,6 +86,7 @@ namespace Hospital_DataBase_API.Repository
             return user;
 
         }
+
     }
 }
     

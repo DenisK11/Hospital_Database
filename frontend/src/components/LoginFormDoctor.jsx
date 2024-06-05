@@ -92,7 +92,7 @@ export async function action({ request }) {
 
     if (response.status === 200) {
       localStorage.setItem("token", response.data.result.token);
-      return redirect("/patient-account");
+      return redirect("/doctor-account");
     }
   } catch (err) {
     return json({

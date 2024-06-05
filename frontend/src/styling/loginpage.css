@@ -11,8 +11,9 @@
   border-radius: 10px;
   height: 80%;
   width: 23%;
+  top: 15%;
   position: relative;
-  left: 9%;
+  left: 3%;
 }
 
 .content-container {
@@ -46,6 +47,7 @@ input {
 
 button {
   padding: 10px 20px;
+  width: 3000px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -63,7 +65,7 @@ img {
 
 /* buttons style*/
 .buttonLog {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -74,11 +76,11 @@ img {
   color: #fff;
   display: block; /* Ensure button takes full width */
   margin: 0 auto; /* Center horizontally */
-  width: 80%; /* Make button width fit its content */
+  width: 85%; /* Make button width fit its content */
   margin-top: 90%;
 }
 .buttonSign {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -89,7 +91,7 @@ img {
   color: #fff;
   display: block; /* Ensure button takes full width */
   margin: 0 auto; /* Center horizontally */
-  width: 80%; /* Make button width fit its content */
+  width: 85%; /* Make button width fit its content */
   margin-top: -50%;
 }
 
