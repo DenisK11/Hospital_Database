@@ -10,8 +10,25 @@ function PatientAccount() {
     navigate(page);
   };
 
+  const handleDeleteAccount = () => {
+    // Handle the account deletion logic here
+    alert("Account deleted");
+  };
+
   return (
     <>
+     <button
+          className="delete-account-button"
+          onClick={handleDeleteAccount}
+        >
+          Delete Account
+        </button>
+        <button
+          className="delete-appointment-button"
+          onClick={() => toggleLoadPage("delete-appointment-patient")}
+        >
+          Delete Appointment
+        </button>
       <div className="login-container">
         <img src="../assets/anca.png" alt="Login Image" />
         <div className="purple-overlay">
@@ -42,7 +59,9 @@ function PatientAccount() {
             </button>
           </>
         </div>
+       
       </div>
+      
       <Outlet />
     </>
   );

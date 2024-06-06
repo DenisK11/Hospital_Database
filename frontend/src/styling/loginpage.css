@@ -102,3 +102,37 @@ img {
 .button:active {
   background-color: rgb(122, 48, 48);
 }
+
+/* Add this to your loginpage.css */
+.delete-account-button {
+  position: absolute;
+  top: 10px; /* Adjust this value as needed */
+  right: 10px; /* Adjust this value as needed */
+  background-color: red; /* Customize the button color */
+  width: 140px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-account-button:hover {
+  background-color: darkred;
+}
+.delete-appointment-button {
+  position: absolute;
+  top: 60px; /* Adjust this value as needed */
+  right: 10px; /* Adjust this value as needed */
+  background-color: red; /* Customize the button color */
+  width: 140px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-appointment-button:hover {
+  background-color: darkred;
+}
