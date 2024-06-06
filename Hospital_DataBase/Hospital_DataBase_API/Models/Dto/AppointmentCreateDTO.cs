@@ -14,6 +14,6 @@ namespace Hospital_DataBase_API.Models.Dto
         public DateTime Date { get; set; }
 
         [Required]
-        public string Doctor {  get; set; }
+        public string DoctorName { get; set; }
     }
 }

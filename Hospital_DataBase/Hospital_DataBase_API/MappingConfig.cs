@@ -11,6 +11,8 @@ namespace Hospital_DataBase_API
             CreateMap<Appointment, AppointmentDTO>();
             CreateMap<AppointmentDTO, Appointment>();
 
+            CreateMap<AppointmentCreateDTO, AppointmentDTO>();
+
             CreateMap<Appointment, AppointmentCreateDTO>().ReverseMap();
             CreateMap<Appointment, AppointmentUpdateDTO>().ReverseMap();
 

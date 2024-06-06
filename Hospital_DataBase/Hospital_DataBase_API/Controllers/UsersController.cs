@@ -111,8 +111,5 @@ namespace Hospital_DataBase_API.Controllers
             return list == null ? NotFound() : Ok(list);
         }
 
-
-       
-
     }
 }
