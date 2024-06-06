@@ -32,6 +32,7 @@ import GetAllSections from "./pages/GetAllSections";
 import GetAllProcedures from "./pages/GetAllProcedures";
 import DeleteProcedure from "./pages/DeleteProcedure";
 import PostProcedure from "./pages/PostProcedure";
+import DeleteAppointmentPatient from "./pages/DeleteAppointmentPatient";
 
 import Root from "./Root";
 import { action as signupAction } from "./components/SignUpForm";
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
             path: "see-doctors",
             element: <SeeDoctorsPage />,
           },
+          {
+            path: "delete-appointment-patient",
+            element: <DeleteAppointmentPatient />
+          }
         ],
       },
       {
