@@ -1,4 +1,5 @@
-﻿using Hospital_DataBase_API.Models;
+﻿using Hospital_DataBase_API.Data;
+using Hospital_DataBase_API.Models;
 using Hospital_DataBase_API.Models.Dto;
 using Hospital_DataBase_API.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Text.Json;
 
@@ -19,11 +21,14 @@ namespace Hospital_DataBase_API.Controllers
         private readonly IUserRepository _userRepo;
         protected APIResponse _response;
 
-        public UsersController(IUserRepository userRepo, ISectionRepository dbSection)
+        private readonly ApplicationDbContext _userContext;
+
+        public UsersController(IUserRepository userRepo, ISectionRepository dbSection, ApplicationDbContext userContext)
         {
             _userRepo = userRepo;
             _response = new();
             _dbSection = dbSection;
+            _userContext = userContext;
         }
 
         [HttpPost("login")]
@@ -83,5 +88,31 @@ namespace Hospital_DataBase_API.Controllers
             _response.IsSuccess = true;
             return Ok(_response);
         }
+
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<IEnumerable<User>> Get() => await _userContext.Users.ToListAsync();
+
+        [HttpGet("string")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetByRole(string role)
+        {
+
+            List<User> list = new List<User>();
+
+            foreach (var user in _userContext.Users )
+            {
+                if (user.Role == role)
+                    list.Add(user);
+
+            }
+
+            return list == null ? NotFound() : Ok(list);
+        }
+
+
+       
+
     }
 }

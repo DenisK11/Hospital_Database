@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.Extensions.Primitives;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hospital_DataBase_API.Models.Dto
 {
@@ -6,8 +7,13 @@ namespace Hospital_DataBase_API.Models.Dto
     {
         [Required]
         public string ProcedureName { get; set; }
-        [Required]
+
         public string SectionName { get; set; }
+
+        [Required]
         public DateTime Date { get; set; }
+
+        [Required]
+        public string Doctor {  get; set; }
     }
 }
