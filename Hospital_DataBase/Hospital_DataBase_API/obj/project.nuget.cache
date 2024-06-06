@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "/pLZZhnNw8FNYyznfdtLBtIQ4ujv8yEPBOwcUPYST80M6OJjehfheuPguSieh3sunnFnWzJH9lpXRHwjNyvZ1g==",
+  "dgSpecHash": "lzcSwnIT1lNgoRHEEGnT/TEyvyl0ExxzOFk7kjbme9Rr/jxvHPnEJRDADUz5pRnxC/p91b3xvqquGSwMACnspg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Denis\\Documents\\GIT\\Project_Sani\\Hospital_Database\\Hospital_DataBase\\Hospital_DataBase_API\\Hospital_DataBase_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Denis\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Denis\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Denis\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Denis\\.nuget\\packages\\dateonlytimeonly.aspnet\\2.1.1\\dateonlytimeonly.aspnet.2.1.1.nupkg.sha512",
+    "C:\\Users\\Denis\\.nuget\\packages\\dateonlytimeonly.aspnet.swashbuckle\\2.1.1\\dateonlytimeonly.aspnet.swashbuckle.2.1.1.nupkg.sha512",
     "C:\\Users\\Denis\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Denis\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.3\\microsoft.aspnetcore.jsonpatch.8.0.3.nupkg.sha512",
     "C:\\Users\\Denis\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.3\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.3.nupkg.sha512",

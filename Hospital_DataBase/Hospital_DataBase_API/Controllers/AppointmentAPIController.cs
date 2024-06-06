@@ -22,13 +22,16 @@ namespace Hospital_DataBase_API.Controllers
         private readonly IProcedureRepository _dbProcedure;
         private readonly ISectionRepository _dbSection;
         private readonly IMapper _mapper;
-        public AppointmentAPIController(IAppointmentRepository dbAppointment, IMapper mapper,IProcedureRepository dbProcedure, ISectionRepository dbSection)
+        private readonly ApplicationDbContext _contextAppointment;
+        public AppointmentAPIController(IAppointmentRepository dbAppointment, IMapper mapper,IProcedureRepository dbProcedure, ISectionRepository dbSection, ApplicationDbContext contextAppointment)
         {
             _dbAppointment = dbAppointment;
             _mapper = mapper;
             this._response = new();
             _dbProcedure = dbProcedure;
             _dbSection = dbSection;
+            _contextAppointment = contextAppointment;
+
         }
 
 

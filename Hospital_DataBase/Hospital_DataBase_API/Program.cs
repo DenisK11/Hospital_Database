@@ -4,6 +4,7 @@ using Hospital_DataBase_API.Repository.IRepository;
 using Hospital_DataBase_API.Repository;
 using Microsoft.EntityFrameworkCore;
 using Hospital_DataBase_API;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddSwaggerGen(c => c.UseDateOnlyTimeOnlyStringConverters());
 
 builder.Services.AddCors(options =>
 {
