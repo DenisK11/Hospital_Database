@@ -94,11 +94,7 @@ namespace Hospital_DataBase_API.Controllers
         {
             try
             {
-                //if(await _dbAppointment.GetAsync(u => u.Date.Date == createDTO.Date.Date && u.ProcedureName == createDTO.ProcedureName) != null && _dbProcedure.GetAsync(u => u.Name == createDTO.ProcedureName))
-                //{
-                //    ModelState.AddModelError("CustomError", "Appointment time is Invalid!");
-                //    return BadRequest(ModelState);
-                //}
+                
 
                 if(await _dbProcedure.GetAsync(u => u.Name.ToLower() == createDTO.ProcedureName.ToLower()) == null)
                 {
